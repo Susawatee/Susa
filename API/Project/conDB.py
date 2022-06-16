@@ -9,7 +9,7 @@ def conDB():
         )
         return mydb
 class Con:
-    def gethard_ware(ID):
+    def gethard_ware3(ID):
         mydb = conDB()
         mycursor = mydb.cursor(dictionary=True)
         sql = "SELECT * FROM hard_ware3 WHERE ID = '{}'".format(ID)
@@ -20,7 +20,7 @@ class Con:
         return data
 
 
-    def inserthard_ware(name,hw_name):
+    def inserthard_ware3(name,hw_name):
         mydb = conDB()
         mycursor = mydb.cursor(dictionary=True)
         sql = "INSERT INTO hard_ware3 (name,hw_name,status,value) VALUES('{}','{}','ON','10')".format(name,hw_name)
@@ -31,7 +31,7 @@ class Con:
         mydb.close()
         return ID
 
-    def updatehard_ware(ID, status):
+    def updatehard_ware3(ID, status):
         mydb = conDB()
         mycursor = mydb.cursor(dictionary=True)
         sql = "UPDATE hard_ware3 SET status = '{}' WHERE id = {}".format(status, ID)
@@ -41,7 +41,7 @@ class Con:
         mydb.close()
         return True
 
-    def deletehard_ware():
+    def deletehard_ware3():
         mydb = conDB()
         mycursor = mydb.cursor(dictionary=True)
         sql = "DELETE FROM hard_ware3 WHERE id = 4"
