@@ -7,7 +7,7 @@ class Action:
         return data
 
     def getupdatehard_ware3(ID, name):
-        data = c.getupdatehard_ware3(ID, name)
+        data = c.updatehard_ware3(ID, name)
         return data
 
     def inserthard_ware3(ID, name, hw_name):
@@ -26,7 +26,7 @@ class Action:
     def updatehard_ware3(ID, status):
         t = c.updatehard_ware3(ID,status)
         if(t == True):
-            data = c.gethw(ID)
+            data = c.gethard_ware3(ID)
         else:
             data = {"error": True}
         return data
