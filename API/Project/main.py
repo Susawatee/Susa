@@ -12,25 +12,25 @@ def read_root():
     return {"Hello": "World"}
 
 
-@app.get("/get_hard_ware")
+@app.get("/get_hard_ware3")
 def get_hard_ware():
-    data = a.gethard_ware()
+    data = a.gethard_ware3()
     return data
 
 
-@app.get("/update_hard_ware")
-def update_hard_ware(ID, status):
-    data = a.updatehard_ware(ID, status)
+@app.get("/update_hard_ware3")
+def update_hard_ware3(ID, status):
+    data = a.updatehard_ware3(ID, status)
     return data
 
-@app.get("/inserthard_ware")
-def inserthard_ware(name, hw_name):
-    data = a.inserthard_ware(name, hw_name)
+@app.get("/inserthard_ware3")
+def inserthard_ware3(name, hw_name):
+    data = a.inserthard_ware3(name, hw_name)
     return data
     
-@app.get("/select_hard_ware")
-def select_hard_ware(ID):
-    data = a.select_hard_ware(ID)
+@app.get("/select_hard_ware3")
+def select_hard_ware3(ID):
+    data = a.selecthard_ware3(ID)
     return data
 
 if __name__ == "__main__":
