@@ -3,8 +3,8 @@ import mysql.connector
 def conDB():
         mydb = mysql.connector.connect(
             host="localhost",
-            user="longtest",
-            password="171145",
+            user="root",
+            password="",
             database="longtest"
         )
         return mydb
@@ -20,16 +20,28 @@ class Con:
         return data
 
 
-    def inserthard_ware3(ID,name,hw_name):
+    def addHW(name, hw_name):
         mydb = conDB()
         mycursor = mydb.cursor(dictionary=True)
-        sql = "INSERT INTO hard_ware3 (ID,name,hw_name,status,value) VALUES('{}','{}','{}','ON','10')".format(ID,name,hw_name)
+        sql = "INSERT INTO hard_ware3 (name, hw_name, status, value) VALUES ('{}', '{}', 'OFF', '0')".format(
+            name, hw_name
+        )
         mycursor.execute(sql)
         mydb.commit()
         ID = mycursor.lastrowid
         mycursor.close()
         mydb.close()
-        return True
+        return ID
+
+    def getHWByID(ID):
+        mydb = conDB()
+        mycursor = mydb.cursor(dictionary=True)
+        sql = "SELECT * FROM hard_ware3 WHERE id = {}".format(ID)
+        mycursor.execute(sql)
+        data = mycursor.fetchall()
+        mycursor.close()
+        mydb.close()
+        return data
 
     def updatehard_ware3(ID, status):
         mydb = conDB()

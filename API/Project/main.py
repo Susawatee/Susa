@@ -23,9 +23,9 @@ def update_hard_ware3(ID, status):
     data = a.updatehard_ware3(ID, status)
     return data
 
-@app.get("/insert_hard_ware3")
-def insert_hard_ware3(ID, name, hw_name):
-    data = a.inserthard_ware3(ID, name, hw_name)
+@app.get("/hw/add_hw")
+async def add_hw(name, hw_name):
+    data = a.addHW(name, hw_name)
     return data
     
 @app.get("/select_hard_ware3")
@@ -34,4 +34,4 @@ def select_hard_ware3(ID):
     return data
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="localhost", port=80)
+    uvicorn.run(app, host="192.168.43.118", port=8000)

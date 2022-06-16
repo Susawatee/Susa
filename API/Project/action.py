@@ -18,13 +18,10 @@ class Action:
         data = c.gethard_ware3(ID)
         return data
 
-    # def inserthard_ware3(ID, name, hw_name):
-    #     t = c.inserthard_ware3(ID,name, hw_name)
-    #     if(t == True):
-    #         data = c.gethard_ware3(ID)
-    #     else:
-    #         data = {"error": True}
-    #     return data
+    def addHW(name, hw_name):
+        ID = c.addHW(name, hw_name)
+        data = c.getHWByID(ID)
+        return data
 
     def updatehard_ware3(ID, status):
         t = c.updatehard_ware3(ID,status)
