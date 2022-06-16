@@ -34,7 +34,7 @@ def select_hard_ware3(ID):
     return data
 
 @app.get("/insert_hard_ware3")
-def insert_hard_ware3(name, hw_name):
+def insert_hw(name, hw_name):
     data = a.inserthard_ware3(name, hw_name)
     return data
 

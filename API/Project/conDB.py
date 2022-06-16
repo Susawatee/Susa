@@ -33,7 +33,7 @@ class Con:
         mydb.close()
         return ID
 
-    def getHWByID(ID):
+    def gethard_ware3(ID):
         mydb = conDB()
         mycursor = mydb.cursor(dictionary=True)
         sql = "SELECT * FROM hard_ware3 WHERE id = {}".format(ID)

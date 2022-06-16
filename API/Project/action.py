@@ -6,8 +6,8 @@ class Action:
         data = c.gethard_ware3()
         return data
 
-    def updatehard_ware3(ID, name):
-        data = c.updatehard_ware3(ID, name)
+    def getupdatehard_ware3(ID, name):
+        data = c.getupdatehard_ware3(ID, name)
         return data
 
     def inserthard_ware3(ID, name, hw_name):
@@ -18,15 +18,15 @@ class Action:
         data = c.gethard_ware3(ID)
         return data
 
-    def addHW(name, hw_name):
-        ID = c.addHW(name, hw_name)
-        data = c.getHWByID(ID)
+    def addhw(name, hw_name):
+        ID = c.addhw(name, hw_name)
+        data = c.gethw(ID)
         return data
 
     def updatehard_ware3(ID, status):
         t = c.updatehard_ware3(ID,status)
         if(t == True):
-            data = c.gethard_ware3(ID)
+            data = c.gethw(ID)
         else:
             data = {"error": True}
         return data
