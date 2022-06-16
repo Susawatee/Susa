@@ -41,7 +41,6 @@ class Con:
         mydb.close()
         return True
 
-
     def deletehard_ware():
         mydb = conDB()
         mycursor = mydb.cursor(dictionary=True)

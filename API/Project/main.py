@@ -27,6 +27,11 @@ def update_hard_ware(ID, status):
 def inserthard_ware(name, hw_name):
     data = a.inserthard_ware(name, hw_name)
     return data
+    
+@app.get("/select_hard_ware")
+def select_hard_ware(ID):
+    data = a.select_hard_ware(ID)
+    return data
 
 if __name__ == "__main__":
     uvicorn.run(app, host="localhost", port=8000)
