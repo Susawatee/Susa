@@ -33,12 +33,3 @@ class Action:
         else:
             data = {"error": True}
         return data
-
-
-    def selecthard_ware3(ID):
-        t = c.selecthard_ware3(ID)
-        if(t == True):
-            data = c.gethard_ware3(ID)
-        else:
-            data = {"error": True}
-        return data
