@@ -33,3 +33,9 @@ class Action:
         else:
             data = {"error": True}
         return data
+
+    def selecthard_ware3(ID):
+        data = c.selecthard_ware3(ID)
+        return data
+        
+       

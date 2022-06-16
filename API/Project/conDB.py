@@ -50,3 +50,13 @@ class Con:
         mycursor.close()
         mydb.close()
         return True
+
+    def selecthard_ware3(ID):
+        mydb = conDB()
+        mycursor = mydb.cursor(dictionary=True)
+        sql = "SELECT * FROM hard_ware3 WHERE ID = '{}'".format(ID)
+        mycursor.execute(sql)
+        data = mycursor.fetchall()
+        mycursor.close()
+        mydb.close()
+        return data
