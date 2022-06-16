@@ -20,16 +20,16 @@ class Con:
         return data
 
 
-    def inserthard_ware3(name,hw_name):
+    def inserthard_ware3(ID,name,hw_name):
         mydb = conDB()
         mycursor = mydb.cursor(dictionary=True)
-        sql = "INSERT INTO hard_ware3 (name,hw_name,status,value) VALUES('{}','{}','ON','10')".format(name,hw_name)
+        sql = "INSERT INTO hard_ware3 (ID,name,hw_name,status,value) VALUES('{}','{}','{}','ON','10')".format(ID,name,hw_name)
         mycursor.execute(sql)
         mydb.commit()
         ID = mycursor.lastrowid
         mycursor.close()
         mydb.close()
-        return ID
+        return True
 
     def updatehard_ware3(ID, status):
         mydb = conDB()

@@ -23,9 +23,9 @@ def update_hard_ware3(ID, status):
     data = a.updatehard_ware3(ID, status)
     return data
 
-@app.get("/inserthard_ware3")
-def inserthard_ware3(name, hw_name):
-    data = a.inserthard_ware3(name, hw_name)
+@app.get("/insert_hard_ware3")
+def insert_hard_ware3(ID, name, hw_name):
+    data = a.inserthard_ware3(ID, name, hw_name)
     return data
     
 @app.get("/select_hard_ware3")
