@@ -34,4 +34,4 @@ def select_hard_ware3(ID):
     return data
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="localhost", port=8000)
+    uvicorn.run(app, host="localhost", port=80)
