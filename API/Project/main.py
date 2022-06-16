@@ -13,7 +13,7 @@ def read_root():
 
 
 @app.get("/get_hard_ware3")
-def get_hard_ware():
+def get_hard_ware3():
     data = a.gethard_ware3()
     return data
 
@@ -34,4 +34,4 @@ def select_hard_ware3(ID):
     return data
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="192.168.43.118", port=8000)
+    uvicorn.run(app, host="192.168.43.118", port=80)

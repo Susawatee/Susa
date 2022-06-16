@@ -71,4 +71,4 @@ class Con:
         data = mycursor.fetchall()
         mycursor.close()
         mydb.close()
-        return data
+        return True
