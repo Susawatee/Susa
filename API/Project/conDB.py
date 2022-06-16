@@ -12,7 +12,7 @@ class Con:
     def gethard_ware(ID):
         mydb = conDB()
         mycursor = mydb.cursor(dictionary=True)
-        sql = "SELECT * FROM hard_ware WHERE ID = '{}'".format(ID)
+        sql = "SELECT * FROM hard_ware3 WHERE ID = '{}'".format(ID)
         mycursor.execute(sql)
         data = mycursor.fetchall()
         mycursor.close()
@@ -23,7 +23,7 @@ class Con:
     def inserthard_ware(name,hw_name):
         mydb = conDB()
         mycursor = mydb.cursor(dictionary=True)
-        sql = "INSERT INTO hard_ware (name,hw_name,status,value) VALUES('{}','{}','ON','10')".format(name,hw_name)
+        sql = "INSERT INTO hard_ware3 (name,hw_name,status,value) VALUES('{}','{}','ON','10')".format(name,hw_name)
         mycursor.execute(sql)
         mydb.commit()
         ID = mycursor.lastrowid
@@ -34,7 +34,7 @@ class Con:
     def updatehard_ware(ID, status):
         mydb = conDB()
         mycursor = mydb.cursor(dictionary=True)
-        sql = "UPDATE hard_ware SET status = '{}' WHERE id = {}".format(status, ID)
+        sql = "UPDATE hard_ware3 SET status = '{}' WHERE id = {}".format(status, ID)
         mycursor.execute(sql)
         mydb.commit()
         mycursor.close()
@@ -45,7 +45,7 @@ class Con:
     def deletehard_ware():
         mydb = conDB()
         mycursor = mydb.cursor(dictionary=True)
-        sql = "DELETE FROM hard_ware WHERE id = 4"
+        sql = "DELETE FROM hard_ware3 WHERE id = 4"
         mycursor.execute(sql)
         mydb.commit()
         mycursor.close()
@@ -55,7 +55,7 @@ class Con:
     def selecthard_ware(ID):
         mydb = conDB()
         mycursor = mydb.cursor(dictionary=True)
-        sql = "SELECT * FROM hard_ware WHERE ID = '{}'".format(ID)
+        sql = "SELECT * FROM hard_ware3 WHERE ID = '{}'".format(ID)
         mycursor.execute(sql)
         mydb.commit()
         mycursor.close()
