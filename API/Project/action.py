@@ -39,4 +39,12 @@ class Action:
             data = {"error": True}
         return data
         
+    def inserthard_ware3(name, hw_name):
+        t = c.inserthard_ware3(name, hw_name)
+        if(t == True):
+            data = c.gethard_ware3(ID)
+        else:
+            data = {"error": True}
+        return data
+
        

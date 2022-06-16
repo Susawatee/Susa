@@ -20,7 +20,7 @@ class Con:
         return data
 
 
-    def addHW(name, hw_name):
+    def inserthard_ware3(name, hw_name):
         mydb = conDB()
         mycursor = mydb.cursor(dictionary=True)
         sql = "INSERT INTO hard_ware3 (name, hw_name, status, value) VALUES ('{}', '{}', 'OFF', '0')".format(

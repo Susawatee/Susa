@@ -33,5 +33,10 @@ def select_hard_ware3(ID):
     data = a.selecthard_ware3(ID)
     return data
 
+@app.get("/insert_hard_ware3")
+def insert_hard_ware3(name, hw_name):
+    data = a.inserthard_ware3(name, hw_name)
+    return data
+
 if __name__ == "__main__":
     uvicorn.run(app, host="192.168.43.118", port=80)
